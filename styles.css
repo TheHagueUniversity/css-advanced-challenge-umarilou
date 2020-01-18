@@ -35,9 +35,10 @@ body {
   border-left: 10px solid black;
   border-right: 10px solid black;
 }
+
 .column-2{
-  background: #E8E888;
-  border-right: 10px solid black;
+    background: #E8E888;
+    border-right: 10px solid black;
 }
 
 .column-3 {
@@ -45,6 +46,7 @@ body {
   border-left: 10px solid black;
   border-right: 10px solid black;
 }
+
 .column-4{
   background: #C6E4F2;
   border-right: 10px solid black;
@@ -62,6 +64,54 @@ body {
   border-right: 10px solid black;
 
 }
+
+@media only screen and (max-width: 900px){
+  .column-2 {
+    display: none;
+  }
+  .row-1 {
+    height: 100px;
+    border-top: 10px solid black;
+    grid-template-columns: 3fr;
+  }
+  .row-3 {
+    height: 200px;
+    border-bottom: 10px solid black;
+    grid-template-columns: 1fr 4fr;
+  }
+
+
+  }
+
+  @media only screen and (max-width: 600px){
+    .column-3 {
+      display: none;
+    }
+    .row-3{
+      height: 200px;
+      border-bottom: 10px solid black;
+      border-left: 10px solid black; 
+      grid-template-columns: 3fr;
+    }
+    .row-2 {
+      height: 200px;
+      border-top: 10px solid black;
+      grid-template-columns: 3fr 1fr;
+    }
+    .column-4{
+      background: #C6E4F2;
+      border-right: 10px solid black;
+      border-left: 10px solid black;
+      border-bottom: 10px solid black;
+    }
+    .column-2{
+        background: #E8E888;
+        border-right: 10px solid black;
+    }
+    .bottom-left{
+      border-left: 10px solid black;
+    }
+  }
 
 /* Clear floats after the columns */
 .row:after {
